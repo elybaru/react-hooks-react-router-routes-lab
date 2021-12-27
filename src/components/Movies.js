@@ -5,12 +5,12 @@ function Movies() {
   return <div>
     <h1>Movies Page</h1>
     {movies.map(movie => {
-      return <div>
+      return <div key={movie.title}>
         <h2>{movie.title}</h2>
         <h3>Runtime:{movie.time}</h3>
         <ul>Genres</ul>
         {movie.genres.map(genre => {
-          return <li>{genre}</li>
+          return <li key={genre}>{genre}</li>
         })
         }
       </div>
