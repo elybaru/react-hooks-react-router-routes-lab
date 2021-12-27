@@ -3,12 +3,12 @@ import { directors } from "../data";
 
 function Directors() {
   return <div>
-    <h2>Directors Page</h2>
+    <h1>Directors Page</h1>
     {directors.map(director => {
-      return <div>{director}
+      return <div key={director.name}>{director.name}
         <ul>Movies</ul>
         {director.movies.map(movie => {
-          return <li>{movie}</li>
+          return <li key={movie}>{movie}</li>
         })}
       </div>
     })}
